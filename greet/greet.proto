@@ -1,0 +1,14 @@
+syntax = "proto3";
+package greet;
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string reply = 1;
+}
+
+service Ping {
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
